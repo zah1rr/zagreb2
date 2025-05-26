@@ -15,20 +15,19 @@ header h1 {
 }
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0d7511;
   z-index: 1;
   position: sticky;
   top: 0;
   transition: all 0.3s ease;
 }
 .horizontal {
+  height: 65px;
+  background-color: #0d7511;
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow-x: scroll;
+  overflow-y: hidden; /* Hide vertical scrollbar */
   scroll-behavior: smooth;
   width: 100%; /* Ensure a defined width */
   white-space: nowrap; /* Prevent wrapping of child elements */
@@ -89,12 +88,11 @@ header h1 {
 }
 .language {
   position: fixed;
-  top: 62px;
   right: 0;
   z-index: 3;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   backdrop-filter: blur(5px);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 .language details {
   background: transparent;
