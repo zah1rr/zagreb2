@@ -89,7 +89,7 @@ header h1 {
 }
 .language {
   position: fixed;
-  top: 61.5px;
+  top: 62px;
   right: 0;
   z-index: 3;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
