@@ -11,4 +11,19 @@ window.addEventListener("scroll", function () {
   
 });
 
+var SecondScrollTop = 0;
+sideLanguage = document.querySelector('.language');
+window.addEventListener("scroll", function () {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > SecondScrollTop) {
+    sideLanguage.style.top = "0";
+  } else {
+    sideLanguage.style.top = "61.5px";
+  }
+  SecondScrollTop = scrollTop;
+  
+}); 
+
+
+
 
