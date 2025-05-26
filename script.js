@@ -18,7 +18,7 @@ window.addEventListener("scroll", function () {
   if (scrollTop > SecondScrollTop) {
     sideLanguage.style.top = "0";
   } else {
-    sideLanguage.style.top = "62px";
+    sideLanguage.style.top = "63px";
   }
   SecondScrollTop = scrollTop;
   
