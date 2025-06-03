@@ -1,0 +1,302 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: aliceblue;
+}
+header h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.nav {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  transition: all 0.3s ease;
+}
+.horizontal {
+  height: 65px;
+  background-color: #0d7511;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  scroll-behavior: smooth;
+  width: 100%; /* Ensure a defined width */
+  white-space: nowrap; /* Prevent wrapping of child elements */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: black transparent; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-gutter: stable; /* For Chrome */
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+}
+
+.horizontal a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  white-space: nowrap;
+  margin: 0.5rem;
+}
+.active{
+  background-color: #008905;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.background {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("backgroundImage.jpg");
+  height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+.background h1 {
+  font-size: 1.7rem;
+  margin: 0.5rem 0;
+  font-family: "Poppins", sans-serif;
+}
+.background p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  font-family: cursive;
+  font-style: normal;
+}
+.year{
+  font-size: 1.5rem;
+  font-style: italic;
+  font-family: "Sofia", sans-serif;
+  position: absolute;
+  bottom: 2rem;
+  right: inherit;
+  letter-spacing: .2rem;
+}
+.language {
+  position: fixed;
+  right: 0;
+  z-index: 3;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+.language details {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.language details[open] {
+  height: 270px;
+}
+details[open] ul {
+  display: block;
+}
+.language-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+#language {
+  width: 30px;
+  height: auto;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
+  align-self: center;
+}
+.language-menu a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 1.5px solid white;
+}
+
+.language-menu a:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0.8rem;
+}
+.cups {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+}
+.title {
+  font-size: 2rem;
+  color: #008905;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+  margin-top: 1rem;
+  width: 60%;
+  border-bottom: 4px solid #008905;
+  letter-spacing: 4px;
+}
+.content {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px 0.5px black;
+
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.desc {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  max-width: 100%;
+}
+.desc h2 {
+  font-size: 1.5rem;
+  color: black;
+  font-family: "Akaya Kanadaka", sans-serif;
+}
+.desc #price {
+  font-size: 1.2rem;
+  color: #008905;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+}
+.item {
+  width: 100%;
+  height: 300px;
+  object-position: center;
+  object-fit: contain;
+  background-color: #e5e5e5;
+  padding-bottom: 2rem;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+
+}
+
+.sphagetties {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+}
+.sphagetties > .title {
+  font-size: 2rem;
+  color: #008905;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  margin-top: 1rem;
+  width: 100%;
+  border-bottom: 4px solid #008905;
+  letter-spacing: 4px;
+}
+
+/* Normal menu styles */
+.normal-menu > .title {
+  text-align: center;
+  align-self: center;
+}
+.normal-menu {
+  box-shadow: 5px 5px 10px 0.5px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8)
+  );
+}
+.items {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  gap: 1rem;
+}
+.item-menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 2px dotted black;
+}
+.item-menu > #item-title {
+  font-size: 1.5rem;
+  color: black;
+  font-family: "Akaya Kanadaka", sans-serif;
+  margin: 0.5rem;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.item-menu > #price {
+  font-size: 1.1rem;
+  color: #008905;
+  font-weight: 600;
+  margin: 0.5rem;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+}
+
+
