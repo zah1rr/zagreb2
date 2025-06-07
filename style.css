@@ -21,7 +21,7 @@ header h1 {
   z-index: 1;
   position: sticky;
   top: 0;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease-in-out;
 }
 .horizontal {
   height: 65px;
@@ -97,10 +97,10 @@ header h1 {
   position: fixed;
   right: 0;
   top: 65px;
-  z-index: 3;
+  z-index: -1;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   backdrop-filter: blur(5px);
-  transition: top 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  transition: top 0.7s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
   border-radius: 0 0 0 16px;
 }
@@ -308,6 +308,9 @@ main {
   letter-spacing: 2px;
   font-weight: 100;
 }
+
+
+
 
 
 
